@@ -1,4 +1,4 @@
-#Steps:
+# Steps:
 
 1) Download the Malware.exe file to your desktop.
 2) Run the server.py file.
