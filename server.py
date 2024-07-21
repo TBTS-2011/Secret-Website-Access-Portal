@@ -1,3 +1,4 @@
+
 from http.server import SimpleHTTPRequestHandler, HTTPServer
 import cgi
 import os
@@ -58,9 +59,9 @@ class MyHandler(SimpleHTTPRequestHandler):
             super().do_GET()
 
 def run(server_class=HTTPServer, handler_class=MyHandler):
-    server_address = ('', 8000)
+    server_address = ('', 4761)
     httpd = server_class(server_address, handler_class)
-    print('Starting server at http://localhost:8000')
+    print('Starting a server at http://localhost:4761')
     httpd.serve_forever()
 
 if __name__ == '__main__':
