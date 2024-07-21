@@ -1,51 +1,102 @@
+
 <!DOCTYPE html>
-<html lang="en">
+
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <title>Upload Your Profile Picture</title>
+    <title>Rock-café</title>
+
     <style>
+
         body {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
             font-family: Arial, sans-serif;
             margin: 20px;
-            background-color: #121212;
-            color: #e0e0e0;
+            background-color: beige;
+            color: black;
         }
         h1 {
-            color: #1e90ff;
+            font-size: 50px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: black;
         }
         #uploadedImage {
             display: none;
             max-width: 500px;
             margin-top: 20px;
+            border-radius: 25px;
         }
         #response {
             margin-top: 20px;
-            color: #1e90ff;
+            color: grey;
         }
-        input[type="file"],
-        input[type="submit"] {
-            background-color: #1e90ff;
-            color: #121212;
+        input[type="file"], input[type="submit"] {
+            background-color: dark-grey;
+            color: black;
             border: none;
             padding: 10px 20px;
             cursor: pointer;
-            border-radius: 4px;
+            border-radius: 50px;
+            font-size: 15px;
+            margin-top: 20px;
+            box-shadow: inset 0 0 0 0 black;
+            transition: ease-out 0.5s;
+            font-size: 2rem;
+            border-color: bisque;
         }
         input[type="submit"]:hover {
-            background-color: #104e8b;
+            background-color: grey;
         }
+
+        ul {
+            z-index: -1;
+            position: relative;
+            background-color: rgb(187, 182, 182);
+            padding: 40px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(113, 105, 105, 0);
+            opacity: 0.5;
+            border-radius: 40px;
+        }
+
     </style>
+
 </head>
 <body>
-    <h1>Upload Your Profile Picture</h1>
-    <form id="uploadForm" enctype="multipart/form-data" method="post">
+
+<h1>Welcome to Rock-café! <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Hot%20Beverage.png" alt="Hot coffee" width="50" height="50"/></h1><br>
+<h3>Fuel Your Day, One Sip at a Time...</h3><br>
+<h3>Here's what makes us different:</h3>
+
+<ul>
+    <li>Curation of single-origin beans and unique blends from renowned coffee-producing regions.</li>
+    <li>Freshly roasted to order, ensuring maximum flavor and aroma in every cup.</li>
+    <li>Commitment to ethical and sustainable sourcing, supporting fair trade practices and coffee farmers.</li>
+    <li>Variety of grind options and brewing equipment to suit your preferred brewing method.</li>
+    <li>Subscription options available so you'll never run out of your favorite coffee.</li>
+</ul>
+
+<h3>Here's how our coffee's quality looks like:</h3>
+
+<img src="71dbO5GHjhS._AC_UF894,1000_QL80_.jpg" width="300" height="300" border-radius="35px" alt="Coffee Quality"/>
+
+    <h2>Upload your review (photo) below <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Backhand%20Index%20Pointing%20Down.png"
+        width="55" height="55"/></h2><br>
+
+    <form id="UploadForm" enctype="multipart/form-data" method="post">
         <input type="file" name="file" id="file" accept="image/*" />
-        <input type="submit" value="Upload Image" />
-    </form>
+        <input type="submit" value="Upload Image"/>
+    </form><br>
+
     <p id="response">No file uploaded yet.</p>
-    <img id="uploadedImage" src="" alt="Uploaded Image" />
+    <img id="uploadedImage" src="" alt="Uploaded Image"/>
 
     <script>
+
         document.getElementById('uploadForm').onsubmit = function(event) {
             event.preventDefault();
             var formData = new FormData(this);
@@ -56,7 +107,7 @@
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
-                    document.getElementById('response').innerText = 'File uploaded successfully.';
+                    document.getElementById('response').innerText = 'File uploaded successfully';
                     document.getElementById('uploadedImage').src = data.imageUrl;
                     document.getElementById('uploadedImage').style.display = 'block';
                 } else {
@@ -65,9 +116,12 @@
             })
             .catch(error => {
                 console.error('Error uploading file:', error);
-                document.getElementById('response').innerText = 'Error uploading file.';
+                document.getElementById('response').innerText = 'Oops! 404-Error uploading file.';
             });
         };
+
     </script>
+
 </body>
+
 </html>
