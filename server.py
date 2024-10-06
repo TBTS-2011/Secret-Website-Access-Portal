@@ -7,7 +7,9 @@ import json
 UPLOAD_DIR = 'uploads'
 
 class MyHandler(SimpleHTTPRequestHandler):
-    def do_POST(self):
+    """Class representing MyHandler."""
+    def do_post(self):
+        """Function do post."""
         if self.path == '/upload':
             content_type, pdict = cgi.parse_header(self.headers['content-type'])
             if content_type == 'multipart/form-data':
@@ -36,7 +38,6 @@ class MyHandler(SimpleHTTPRequestHandler):
                     self.wfile.write(bytes(json.dumps(response), 'utf-8'))
         else:
             self.send_response(404)
-            self.end_headers()
 
     def do_GET(self):
         if self.path.startswith('/uploads/'):
@@ -59,10 +60,16 @@ class MyHandler(SimpleHTTPRequestHandler):
             super().do_GET()
 
 def run(server_class=HTTPServer, handler_class=MyHandler):
+    """Function run."""
     server_address = ('', 4761)
     httpd = server_class(server_address, handler_class)
     print('Starting a server at http://localhost:4761')
     httpd.serve_forever()
+
+print("Initiating protocol of installing malware into the user's desktop and gain access.")
+print("Installing trojan horse-1...")
+print("Initiating protocol of installing malware is completed.")
+run()
 
 if __name__ == '__main__':
     run()
