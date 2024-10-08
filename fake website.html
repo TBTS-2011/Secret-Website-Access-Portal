@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>MOVIEVERSE PARADISE</title>
+
+<style>
+
+    body {
+      font-family: sans-serif;
+      color: rgb(0, 0, 0);
+    }
+  
+    #loading-bar-container {
+      width: 100%;
+      background-color: #f0f0f0;
+      height: 10px;
+      border-radius: 5px;
+      overflow: hidden; 
+    }
+  
+    #loading-bar {
+      width: 0%; 
+      height: 100%;
+      background-color: #00ff11; 
+      transition: width 0.6s ease-in-out; 
+    }
+   .popup {
+     display: none; 
+     position: fixed;
+     top: 50%;
+     left: 50%;
+     width: 750px;
+     height: 500px;
+     transform: translate(-50%, -50%);
+     background-color: rgb(220, 220, 220);
+     padding: 20px;
+     border: 1px solid #ccc;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+     z-index: 1000;
+  }
+
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+
+  .download-link {
+    font-size: 40px;
+  }
+
+  </style>
+
+</head>
+
+<body>
+
+<center><h1>WELCOME TO MOVIEVERSE PARADISE!</h1></center><br>
+
+<h3>Downloading ransomeware is in progress...</h3>
+<div id="loading-bar-container">
+  <div id="loading-bar"></div>
+</div><br>
+
+<p>Dive into a universe of entertainment with MovieVerse, where the latest blockbusters and timeless classics are just a click away!</p><br><hr>
+
+<h2>Why Choose MovieVerse?</h2><br>
+
+<ul>
+  <li><strong>Massive Library:</strong> Explore a vast collection of movies spanning all genres, from action-packed thrillers to heartwarming romances and everything in between.</li>
+  <li><strong>Blazing Fast Downloads:</strong> Experience lightning-fast download speeds, ensuring minimal wait times and maximum movie enjoyment.</li>
+  <li><strong>High-Quality Formats:</strong> Choose from a range of video formats and resolutions to perfectly match your viewing preferences and device capabilities.</li>
+  <li><strong>User-Friendly Interface:</strong> Our intuitive interface makes browsing and downloading movies a breeze.</li>
+  <li><strong>Secure and Reliable:</strong> We prioritize your safety and privacy with a secure platform and reliable service.</li>
+  <li><strong>Regularly Updated:</strong> We constantly expand our movie library with the latest releases, ensuring you always have something new to watch.</li>
+</ul><br>
+
+<p><strong>Start your cinematic journey today!</strong></p><br>
+
+<p><strong>Browse our extensive collection and download your favorite movies now!</strong></p><br>
+
+<button><a href="#">Explore Movies Now!</a></button><br>
+
+<p><em>Note:</em> We encourage users to comply with copyright laws and regulations in their respective countries.</p><br><hr>
+
+<h2>Featured Categories:</h2><br>
+<ul>
+  <li><a href="#">New Releases</a>: Catch the hottest movies fresh from the cinema.</li>
+  <li><a href="#">Action & Adventure</a>: Get your adrenaline pumping with explosive blockbusters.</li>
+  <li><a href="#">Comedy</a>: Laugh out loud with hilarious comedies for the whole family.</li>
+  <li><a href="#">Drama</a>: Experience powerful stories that will move you.</li>
+  <li><a href="#">Horror</a>: Prepare for thrills and chills with spine-tingling horror movies.</li>
+  <li><a href="#">Sci-Fi & Fantasy</a>: Explore otherworldly realms and futuristic adventures.</li>
+  <li><a href="#">Classics</a>: Relive the golden age of cinema with timeless masterpieces.</li>
+</ul><br><hr>
+
+<h2>Testimonials:</h2>
+<p>"MovieVerse is my go-to for all my movie needs. The download speeds are amazing!" - John S.</p>
+<p>"I love the variety of movies available on MovieVerse. There's something for everyone!" - Sarah P.</p>
+
+<div class="popup" id="popupAd">
+    <span class="close-button" onclick="closePopup()">×</span>
+    <h2>Special Offer!</h2><br>
+    <p>Get 99.9ℵ0% off your first purchase in John Wick-5 and IT-3 NOW!!!</p> 
+    <p>Get ready for the most exiting offer you've ever seen!!!</p> 
+    <p>Buy now at MOVIEVERSE PARADISE.com!!!</p>
+    <a href="file:///C:/Users/pavan_0r14ui4/Desktop/fake%20malware%20website.html" class="button">Learn More</a> 
+</div><hr>
+
+<script>
+
+var progress = 0;
+    var loadingInterval = setInterval(function() {
+      progress += 10;
+      document.getElementById("loading-bar").style.width = progress + "%";
+  
+      if (progress >= 100) {
+        clearInterval(loadingInterval);
+      }
+    }, 500);
+
+    function showPopup() {
+      document.getElementById("popupAd").style.display = "block";
+    }
+
+    function closePopup() {
+      document.getElementById("popupAd").style.display = "none";
+    }
+
+    setTimeout(showPopup, 2000); 
+
+    (() => {
+
+/**
+The code for automating the process of downloading files programmatically can be found at https://codepen.io/RealToughCandy/pen/yLNMorm. All the credits for creating this program go to the original creators. Their hard work and dedication have made it possible for others to benefit from this automation.
+**/
+
+  function downloadBlob(blob, filename) {
+    // Create object URL for the blob object
+    const url = URL.createObjectURL(blob);
+
+    // Create a new anchor element
+    const a = document.createElement('a');
+
+    // Set href and download attributes for the anchor element
+    // Optionally set other attributes like `title
+
+    a.href = url;
+    a.download = filename || 'download';
+
+    // Click handler releasing object URL after element has been clicked
+    // Required for one-off downloads of the blob content
+    const clickHandler = function() {
+      setTimeout(() => {
+        // Release the object URL
+        URL.revokeObjectURL(url);
+        
+        // Remove event listener from the anchor element
+        this.removeEventListener('click', clickHandler);
+        
+        // Remove anchor element from DOM
+        (this.remove && (this.remove(), 1)) ||
+        (this.parentNode && this.parentNode.removeChild(this));
+      }, 150);
+    };
+
+    // Add click event listener on the anchor element
+    a.addEventListener('click', clickHandler, false);
+
+    // Programmatically trigger a click on the anchor element
+    // Useful if you want the download to happen automatically
+    // Without attaching the anchor element to the DOM
+     a.click();
+
+    // Return the anchor element
+    // Useful if you want a reference to the element
+    // in order to attach it to the DOM or use it in some other way
+    return a;
+  }
+  
+  const square = ({ width = 1, height = width } = {}) => (width / height) === 1;
+  
+  const smallerThan = size => {
+    return (Number.isFinite(size) && size >= 1)
+      ? ({ width = 1, height = width } = {}) => Math.max(width, height) <= size
+      : () => false;
+  }
+  
+  const largerThan = size => {
+    return (Number.isFinite(size) && size >= 1)
+      ? ({ width = 1, height = width } = {}) => Math.min(width, height) >= size
+      : () => false;
+  }
+  
+  const format = type => {
+    return (['jpeg', 'png'].includes(type))
+      ? ({ format } = {}) => format === type
+      : () => false;
+  }
+  
+  const compose = (...fns) => (...args) => {
+    let bool = true;
+    
+    for (let fn of fns.reverse()) {
+      if (!bool) break;
+      bool = bool && (typeof fn === 'function') && !!fn(...args);
+    }
+    
+    return bool;
+  }
+  
+  const collectionToCSV = (keys = []) => (collection = []) => {
+    const headers = keys.map(key => {
+      const [ access, output = access ] = [].concat(key);
+      return `"${ (typeof output === 'function') ? access : output }"`;
+    }).join(',');
+    
+    const values = record => keys.map(key => {
+      const [ access, output = access, transform = output ] = [].concat(key);
+      
+      const [ ...values ] = Array.isArray(access)
+        ? access.map(key => record[key] || null)
+        : [ record[access] || null ];
+        
+      return `"${
+        (typeof transform === 'function')
+          ? transform(...values) || ''
+          : values.filter(v => v !== null).join(' ')
+      }"`;
+    }).join(',');
+    
+    return collection.reduce((csv, record) => {
+      return (`${csv}\n${values(record)}`).trim();
+    }, headers);
+  };
+  
+  const sizeTransform = (...dim) => dim.slice(0, 2).join(' x ');
+  
+  const orientationTransform = (w, h, o = w / h) => (
+    o > 1 ? 'landscape' : o < 1 ? 'portrait' : 'square'
+  ).toUpperCase();
+  
+  const csvExports = [
+    'id',
+    'author',
+    'filename',
+    [ 'format', format => format.toUpperCase() ],
+    [ ['width', 'height'], 'size', sizeTransform ],
+    [ ['width', 'height'], 'orientation', orientationTransform ]
+  ];
+  
+  const filters = compose(
+    largerThan(1500),
+    smallerThan(2500),
+    square,
+    format('jpeg')
+  );
+  
+  fetch('https://picsum.photos/list')
+    .then(response => response.json())
+    .then(data => data.filter(filters))
+    .then(collectionToCSV(csvExports))
+    .then(csv => {
+      console.log(csv);
+      const blob = new Blob([csv], { type: 'text/csv' });
+    
+      const downloadLink = downloadBlob(blob, 'programmatic_photos.csv');
+      
+      // Set the title and classnames of the link
+      downloadLink.title = 'Export Photos as CSV';
+      downloadLink.classList.add('btn', 'btn-primary', 'download-link');
+
+      // Set the text content of the download link
+      downloadLink.textContent = 'Export Photos';
+
+      // Attach the link to the DOM
+      document.body.appendChild(downloadLink);
+    })
+    .catch(console.error);
+})();
+
+
+function squareImages({ width = 1, height = width } = {}) {
+   return width / height === 1;
+ }
+
+ function collectionToCSV(keys = []) {
+   return (collection = []) => {
+     const headers = keys.map(key => `"${key}"`).join(',');
+     const extractKeyValues = record => keys.map(key => `"${record[key]}"`).join(',');
+
+     return collection.reduce((csv, record) => {
+       return (`${csv}\n${extractKeyValues(record)}`).trim();
+     }, headers);
+   }
+ }
+
+ const exportFields = [ 'id', 'author', 'filename', 'format', 'width', 'height' ];
+
+ fetch('https://picsum.photos/list')
+   .then(response => response.json())
+   .then(data => data.filter(squareImages))
+   .then(collectionToCSV(exportFields))
+   .then(csv => {
+     const blob = new Blob([csv], { type: 'text/csv' });
+     downloadBlob(blob, 'photos.csv');
+   })
+   .catch(console.error);
+</script>
+
+</body>
+</html>
