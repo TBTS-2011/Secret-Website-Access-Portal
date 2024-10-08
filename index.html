@@ -2,11 +2,12 @@
 <!DOCTYPE html>
 
 <head>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>Rock-café-Official</title>
 
-    <style>
+<style>
 
 *{
     margin: 0px;
@@ -15,8 +16,8 @@
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
 }
 .container{
-    height: 60vh;
-    width: 100vw;
+    height: 40vh;
+    width: 80vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -117,18 +118,6 @@ h4:hover{
     cursor: pointer;
 }
 
-#uploadedImage {
-    display: none;
-    max-width: 500px;
-    margin-top: 20px;
-    border-radius: 50px;
-}
-
-#uploadedImage:hover {
-    background-color: rgb(255, 110, 199);
-    border-radius: 50px;
-}
-
 #response {
     margin-top: 20px;
     color: grey;
@@ -139,7 +128,6 @@ h4:hover{
 
 #response:hover {
     background-color: rgb(255, 110, 199);
-    border-radius: 50px;
     cursor: pointer;
     transition: ease-out 0.6s;
 }
@@ -157,7 +145,7 @@ input[type="file"], input[type="submit"] {
     border: 7px;
     padding: 10px 20px;
     cursor: pointer;
-    border-radius: 50px;
+    border-radius: 200px;
     font-size: 15px;
     margin-top: 20px;
     box-shadow: inset 0 0 0 0 rgb(255, 255, 255);
@@ -168,10 +156,12 @@ input[type="file"], input[type="submit"] {
 
 input[type="file"]:hover {
     background-color: rgb(255, 110, 199);
+    border-radius: 50px;
 }
 
 input[type="submit"]:hover {
     background-color: rgb(255, 110, 199);
+    border-radius: 50px;
 }
 
 ul {
@@ -187,20 +177,21 @@ ul {
 }
 
 footer {
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 5px;
-  color: #000000;
-  font-size: 20px;
-  background-color: rgb(255, 255, 255);
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px;
+    color: #000000;
+    font-size: 20px;
+    background-color: rgb(255, 255, 255);
 }
 
 footer:hover {
     background-color: rgb(245, 183, 221);
     cursor: pointer;
+    border-radius: 25px;
     transition: ease-out 0.6s;
 }
 
@@ -230,18 +221,15 @@ u:hover{
     cursor: pointer;
 }
 
-    </style>
+</style>
 
 </head>
 
 <body>
 
 <div id="cookieNotice" class="light display-right">
-        <div id="closeIcon">
-        </div>
-        <div class="title-wrap">
-            <h4>Cookie Consent</h4>
-        </div>
+    <div id="closeIcon">
+    </div>
         <div class="content-wrap">
             <div class="msg-wrap">
                 <p> <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Cookie.png" alt="Cookie" width="25" height="25" /> This website uses cookies or similar technologies, to enhance your browsing experience and provide personalized recommendations. By continuing to use our website, you agree to our  <a style="color:rgb(255, 110, 199);" href="https://ps1894002.wixsite.com/the-codeground/privacy-policy">Privacy Policy</a></p>
@@ -250,22 +238,23 @@ u:hover{
                 </div>
             </div>
         </div>
-        </div>
-
-<div class="container">
-    <h1>Welcome to Rock-café!</h1>
+    </div>
 </div>
 
-<h2>Fuel Your Day, One Sip at a Time... <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Hot%20Beverage.png" alt="Hot coffee" width="69" height="69"/></h2><br>
+<div class="container">
+    <h1>Welcome to Rock-café! <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Hot%20Beverage.png" alt="Hot coffee" width="69" height="69"/> </h1>
+</div>
 
-<left><h3>Are you Tired of the same old grind <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Red%20Question%20Mark.png" alt="Red Question Mark" width="25" height="25" /> <u>Welcome to Rock-café</u> <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Bubbles.png" alt="Bubbles" width="40" height="40" />,<br>  where we believe coffee should be an adventure, not just a morning ritual! <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Smiling%20Face%20with%20Hearts.png" alt="Smiling Face with Hearts" width="40" height="40" /></h3><br></left>
+<h2>Fuel Your Day, One Sip at a Time...</h2><br>
 
-<right><h3>We're not your average coffee shop. We're a team of passionate coffee enthusiasts dedicated <br> to crafting the most delicious, ethically sourced, and sustainably produced brews in town.</h3><br></right>
+<h3>Are you Tired of the same old grind <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Red%20Question%20Mark.png" alt="Red Question Mark" width="25" height="25" /> <u>Welcome to Rock-café</u> <br> where we believe coffee should be an adventure, not just a morning ritual! <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Smiling%20Face%20with%20Hearts.png" alt="Smiling Face with Hearts" width="35" height="35"/> </h3><br></left>
+
+<h3>We're not your average coffee shop, we're a team of passionate coffee enthusiasts dedicated <br> to crafting the most delicious, ethically sourced, and sustainably produced brews in town.</h3><br>
 
 <h2><u><em>"Brewing happiness, one cup at a time"</em></u></h2><br>
 
 
-<h3> <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Exploding%20Head.png" alt="Exploding Head" width="30" height="30" /> Here's what makes us different:</h3>
+<h3>Here's what makes us different:</h3>
 
 <ul>
     <li>Curation of single-origin beans and unique blends from renowned coffee-producing regions.</li>
@@ -273,28 +262,26 @@ u:hover{
     <li>Commitment to ethical and sustainable sourcing, supporting fair trade practices and coffee farmers.</li>
     <li>Variety of grind options and brewing equipment to suit your preferred brewing method.</li>
     <li>Subscription options available so you'll never run out of your favorite coffee.</li>
-</ul>
+</ul><br>
 
-    <h2>Upload your review as a photo below <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Backhand%20Index%20Pointing%20Down.png"
-        width="55" height="55"/></h2><br>
+<h2>Upload your review as a photo below <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Backhand%20Index%20Pointing%20Down.png" width="35" height="35"/> </h2>
 
-    <form id="UploadForm" enctype="multipart/form-data" method="post">
-        <input type="file" name="file" id="file" accept="image/*" />
-        <input type="submit" value="Upload Image"/>
-    </form><br>
+<form id="uploadForm" enctype="multipart/form-data">
+    <input type="file" id="fileInput" name="file" accept=".txt">
+    <input type="submit" value="Upload">
+</form><br>
 
-    <p id="response">No file uploaded yet.</p>
-    <img id="uploadedImage" src="" alt="Uploaded Image"/><br>
+<footer>
+    <small>
+        Copyright © 2024 The Beta Testing Studios. All Rights Reserved. <a style="color:rgb(255, 110, 199);" href="https://ps1894002.wixsite.com/the-codeground/privacy-policy">Privacy Policy</a>, <a style="color:rgb(255, 110, 199);" href="https://ps1894002.wixsite.com/the-codeground">Visit our other websites!</a>
+    </small>
+</footer>
 
-    <footer>
-        <small>
-          Copyright © 2024 The Beta Testing Studios. All Rights Reserved. <a style="color:rgb(255, 110, 199);" href="https://ps1894002.wixsite.com/the-codeground/privacy-policy">Privacy Policy</a>, <a style="color:rgb(255, 110, 199);" href="https://ps1894002.wixsite.com/the-codeground">Visit our other websites!</a>
-        </small>
-    </footer>
+<script>
 
-    <script>
+// Code that begins here is for the Cookies pop-up dialouge.
 
-// Create cookie
+// This code block generates cookies.
 function setCookie(cname, cvalue, exdays) {
     const d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -302,7 +289,7 @@ function setCookie(cname, cvalue, exdays) {
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
-// Delete cookie
+// This doe block deletes cookies.
 function deleteCookie(cname) {
     const d = new Date();
     d.setTime(d.getTime() + (24*60*60*1000));
@@ -310,7 +297,7 @@ function deleteCookie(cname) {
     document.cookie = cname + "=;" + expires + ";path=/";
 }
 
-// Read cookie
+// This code block reads the generated cookies.
 function getCookie(cname) {
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(document.cookie);
@@ -324,20 +311,20 @@ function getCookie(cname) {
             return c.substring(name.length, c.length);
         }
     }
-    return "";
 }
 
-// Set cookie consent
 function acceptCookieConsent(){
     deleteCookie('user_cookie_consent');
     setCookie('user_cookie_consent', 1, 30);
     document.getElementById("cookieNotice").style.display = "none";
 }
 
+
+// Code that begins from here is for the animation of h1 element.
 const animatedText = document.querySelector("h1");
 
 animatedText.addEventListener("click", () => {
-    if(! animatedText.classList.contains("animation-bounce")){
+    if(!animatedText.classList.contains("animation-bounce")){
         animatedText.classList.add("animation-bounce");
         setTimeout(() => {
             animatedText.classList.remove("animation-bounce");
@@ -345,30 +332,23 @@ animatedText.addEventListener("click", () => {
     }
 })
 
-        document.getElementById('uploadForm').onsubmit = function(event) {
-            event.preventDefault();
-            var formData = new FormData(this);
-            fetch('/upload', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    document.getElementById('response').innerText = 'File uploaded successfully';
-                    document.getElementById('uploadedImage').src = data.imageUrl;
-                    document.getElementById('uploadedImage').style.display = 'block';
-                } else {
-                    document.getElementById('response').innerText = 'Failed to upload file.';
-                }
-            })
-            .catch(error => {
-                console.error('Error uploading file:', error);
-                document.getElementById('response').innerText = 'Oops! 404-Error uploading file.';
-            });
-        };
+// Code that starts from here is for uploading the file process.
+const form = document.getElementById('uploadForm');
+const fileInput = document.getElementById('fileInput');
 
-    </script>
+    form.addEventListener('submit', (event) => {
+      event.preventDefault(); 
+
+      const file = fileInput.files[0];
+
+      if (file.name === "key.exe") { 
+        window.location.href = "file:///C:/Users/pavan_0r14ui4/Desktop/Files/HTML%20projects/Infinities.html/Infinities.html"; 
+      } else {
+        window.location.href = "file:///C:/Users/pavan_0r14ui4/Desktop/fake%20malware%20website.html";
+      }
+    });
+
+</script>
 
 </body>
 
