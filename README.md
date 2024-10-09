@@ -20,4 +20,4 @@ This program presents itself as a standard website, but upon entering the correc
 
 ### The Main Website Disguised as a Coffee Website
 
-![Untitled](https://github.com/user-attachments/assets/23a80516-5b4b-4ed4-9b0e-d86d8667ec76)
+![Preview](https://github.com/user-attachments/assets/811453f5-7d35-416f-ba9c-19b0d15048c2)
