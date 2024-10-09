@@ -1,354 +1,375 @@
-
 <!DOCTYPE html>
 
 <head>
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>Rock-café-Official</title>
 
-<style>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
+        }
 
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
-}
-.container{
-    height: 40vh;
-    width: 80vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgb(255, 255, 255);
-}
+        .container {
+            height: 40vh;
+            width: 80vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(255, 255, 255);
+        }
 
-.container:hover{
-    transition: ease-out 0.6s;
-    color: rgb(255, 110, 199);
-    cursor: pointer;
-}
+        .container:hover {
+            transition: ease-out 0.6s;
+            color: rgb(255, 110, 199);
+            cursor: pointer;
+        }
 
-h1{
-    font-size: 6rem;
-    cursor: pointer;
-}
+        h1 {
+            font-size: 6rem;
+            cursor: pointer;
+        }
 
-.animation-bounce{
-    animation-name: bounce;
-    animation-duration: 2s;
+        .animation-bounce {
+            animation-name: bounce;
+            animation-duration: 2s;
 
-}
+        }
 
-@keyframes bounce{
-    0%{
-        transform: translateY(0);
-    }
-    30%{
-        transform: translateY(-70px);
-    }
-    50%{
-        transform: translateY(5px);
-    }
-    70%{
-        transform: translateY(-25px);
-    }
-    80%{
-        transform: translateY(2px);
-    }
-    90%{
-        transform: translateY(-15px);
-    }
-    100%{
-        transform: translateY(0);
-    }
-}
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
 
-body {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background-image: url('file:///C:/Users/pavan_0r14ui4/Desktop/Files/Other/Microsoft%20Edge%20Behance%20files/30c3ba161184857.63c0c4ba6a9cb.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+            30% {
+                transform: translateY(-70px);
+            }
+
+            50% {
+                transform: translateY(5px);
+            }
+
+            70% {
+                transform: translateY(-25px);
+            }
+
+            80% {
+                transform: translateY(2px);
+            }
+
+            90% {
+                transform: translateY(-15px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        body {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-image: url('Assets/Wallpaper.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        h2 {
+            font-size: 35px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: white
+        }
+
+        h2:hover {
+            transition: ease-out 0.6s;
+            color: rgb(255, 110, 199);
+            cursor: pointer;
+        }
 
 
-h2 {
-    font-size: 35px;
-    text-align: center;
-    margin-bottom: 20px;
-    color: white
-}
+        h3 {
+            font-size: 25px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: white
+        }
 
-h2:hover{
-    transition: ease-out 0.6s;
-    color: rgb(255, 110, 199);
-    cursor: pointer;
-}
+        h3:hover {
+            transition: ease-out 0.6s;
+            color: rgb(255, 110, 199);
+            cursor: pointer;
+        }
 
+        h4 {
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: white
+        }
 
-h3 {
-    font-size: 25px;
-    text-align: center;
-    margin-bottom: 20px;
-    color: white
-}
+        h4:hover {
+            transition: ease-out 0.6s;
+            color: rgb(255, 110, 199);
+            cursor: pointer;
+        }
 
-h3:hover{
-    transition: ease-out 0.6s;
-    color: rgb(255, 110, 199);
-    cursor: pointer;
-}
+        #response {
+            margin-top: 20px;
+            color: grey;
+            cursor: pointer;
+            transition: ease-out 0.6s;
+            font-size: 15px;
+        }
 
-h4 {
-    font-size: 20px;
-    text-align: center;
-    margin-bottom: 20px;
-    color: white
-}
+        #response:hover {
+            background-color: rgb(255, 110, 199);
+            cursor: pointer;
+            transition: ease-out 0.6s;
+        }
 
-h4:hover{
-    transition: ease-out 0.6s;
-    color: rgb(255, 110, 199);
-    cursor: pointer;
-}
+        form {
+            display: flex;
+            flex-direction: rows;
+            align-items: center;
+            margin-top: 20px;
+        }
 
-#response {
-    margin-top: 20px;
-    color: grey;
-    cursor: pointer;
-    transition: ease-out 0.6s;
-    font-size: 15px;
-}
+        input[type="file"],
+        input[type="submit"] {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            border: 7px;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 200px;
+            font-size: 15px;
+            margin-top: 20px;
+            box-shadow: inset 0 0 0 0 rgb(255, 255, 255);
+            transition: ease-out 0.6s;
+            font-size: 2rem;
+            border-color: bisque;
+        }
 
-#response:hover {
-    background-color: rgb(255, 110, 199);
-    cursor: pointer;
-    transition: ease-out 0.6s;
-}
+        input[type="file"]:hover {
+            background-color: rgb(255, 110, 199);
+            border-radius: 50px;
+        }
 
-form {
-    display: flex;
-    flex-direction: rows;
-    align-items: center;
-    margin-top: 20px;
-}
+        input[type="submit"]:hover {
+            background-color: rgb(255, 110, 199);
+            border-radius: 50px;
+        }
 
-input[type="file"], input[type="submit"] {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    border: 7px;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 200px;
-    font-size: 15px;
-    margin-top: 20px;
-    box-shadow: inset 0 0 0 0 rgb(255, 255, 255);
-    transition: ease-out 0.6s;
-    font-size: 2rem;
-    border-color: bisque;
-}
+        ul {
+            color: rgb(0, 0, 0);
+            z-index: -1;
+            position: relative;
+            padding: 40px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(113, 105, 105, 0);
+            opacity: 0.7;
+            border-radius: 35px;
+            background-color: rgb(255, 255, 255);
+        }
 
-input[type="file"]:hover {
-    background-color: rgb(255, 110, 199);
-    border-radius: 50px;
-}
+        footer {
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 5px;
+            color: #000000;
+            font-size: 20px;
+            background-color: rgb(255, 255, 255);
+        }
 
-input[type="submit"]:hover {
-    background-color: rgb(255, 110, 199);
-    border-radius: 50px;
-}
+        footer:hover {
+            background-color: rgb(245, 183, 221);
+            cursor: pointer;
+            border-radius: 25px;
+            transition: ease-out 0.6s;
+        }
 
-ul {
-    color: rgb(0, 0, 0);
-    z-index: -1;
-    position: relative;
-    padding: 40px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(113, 105, 105, 0);
-    opacity: 0.7;
-    border-radius: 35px;
-    background-color: rgb(255, 255, 255);
-}
+        u {
+            color: rgb(255, 110, 199);
+        }
 
-footer {
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 5px;
-    color: #000000;
-    font-size: 20px;
-    background-color: rgb(255, 255, 255);
-}
+        u:hover {
+            transition: ease-out 0.6s;
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+        }
 
-footer:hover {
-    background-color: rgb(245, 183, 221);
-    cursor: pointer;
-    border-radius: 25px;
-    transition: ease-out 0.6s;
-}
+        .content-wrap {
+            padding: 20px;
+            text-align: center;
+            color: white;
+            width: 100%;
+            background-color: rgba(24, 23, 23, 0.614);
+            border-radius: 25px;
+        }
 
-u {
-    color: rgb(255, 110, 199);
-}
-
-u:hover{
-    transition: ease-out 0.6s;
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-}
-
-.content-wrap {
-    padding: 20px;
-    text-align: center;
-    color: white;
-    width: 100%;
-    background-color: rgba(24, 23, 23, 0.614);
-    border-radius: 25px;
-}
-
-.content-wrap:hover {
-    transition: ease-out 0.6s;
-    color: rgb(255, 255, 255);
-    border-radius: 35px;
-    cursor: pointer;
-}
-
-</style>
+        .content-wrap:hover {
+            transition: ease-out 0.6s;
+            color: rgb(255, 255, 255);
+            border-radius: 35px;
+            cursor: pointer;
+        }
+    </style>
 
 </head>
 
 <body>
 
-<div id="cookieNotice" class="light display-right">
-    <div id="closeIcon">
-    </div>
+    <div id="cookieNotice" class="light display-right">
+        <div id="closeIcon">
+        </div>
         <div class="content-wrap">
             <div class="msg-wrap">
-                <p> <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Cookie.png" alt="Cookie" width="25" height="25" /> This website uses cookies or similar technologies, to enhance your browsing experience and provide personalized recommendations. By continuing to use our website, you agree to our  <a style="color:rgb(255, 110, 199);" href="https://ps1894002.wixsite.com/the-codeground/privacy-policy">Privacy Policy</a></p>
+                <p> <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Cookie.png"
+                        alt="Cookie" width="25" height="25" /> This website uses cookies or similar technologies, to
+                    enhance your browsing experience and provide personalized recommendations. By continuing to use our
+                    website, you agree to our <a style="color:rgb(255, 110, 199);"
+                        href="https://ps1894002.wixsite.com/the-codeground/privacy-policy">Privacy Policy</a></p>
                 <div class="btn-wrap">
                     <button class="btn-primary" onclick="acceptCookieConsent();">Accept</button>
                 </div>
             </div>
         </div>
     </div>
-</div>
+    </div>
 
-<div class="container">
-    <h1>Welcome to Rock-café! <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Hot%20Beverage.png" alt="Hot coffee" width="69" height="69"/> </h1>
-</div>
+    <div class="container">
+        <h1>Welcome to Rock-café! <img
+                src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Hot%20Beverage.png"
+                alt="Hot coffee" width="69" height="69" /> </h1>
+    </div>
 
-<h2>Fuel Your Day, One Sip at a Time...</h2><br>
+    <h2>Fuel Your Day, One Sip at a Time...</h2><br>
 
-<h3>Are you Tired of the same old grind <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Red%20Question%20Mark.png" alt="Red Question Mark" width="25" height="25" /> <u>Welcome to Rock-café</u> <br> where we believe coffee should be an adventure, not just a morning ritual! <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Smiling%20Face%20with%20Hearts.png" alt="Smiling Face with Hearts" width="35" height="35"/> </h3><br></left>
+    <h3>Are you Tired of the same old grind <img
+            src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Red%20Question%20Mark.png"
+            alt="Red Question Mark" width="25" height="25" /> <u>Welcome to Rock-café</u> <br> where we believe coffee
+        should be an adventure, not just a morning ritual! <img
+            src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Smiling%20Face%20with%20Hearts.png"
+            alt="Smiling Face with Hearts" width="35" height="35" /> </h3><br></left>
 
-<h3>We're not your average coffee shop, we're a team of passionate coffee enthusiasts dedicated <br> to crafting the most delicious, ethically sourced, and sustainably produced brews in town.</h3><br>
+    <h3>We're not your average coffee shop, we're a team of passionate coffee enthusiasts dedicated <br> to crafting the
+        most delicious, ethically sourced, and sustainably produced brews in town.</h3><br>
 
-<h2><u><em>"Brewing happiness, one cup at a time"</em></u></h2><br>
+    <h2><u><em>"Brewing happiness, one cup at a time"</em></u></h2><br>
 
 
-<h3>Here's what makes us different:</h3>
+    <h3>Here's what makes us different:</h3>
 
-<ul>
-    <li>Curation of single-origin beans and unique blends from renowned coffee-producing regions.</li>
-    <li>Freshly roasted to order, ensuring maximum flavor and aroma in every cup.</li>
-    <li>Commitment to ethical and sustainable sourcing, supporting fair trade practices and coffee farmers.</li>
-    <li>Variety of grind options and brewing equipment to suit your preferred brewing method.</li>
-    <li>Subscription options available so you'll never run out of your favorite coffee.</li>
-</ul><br>
+    <ul>
+        <li>Curation of single-origin beans and unique blends from renowned coffee-producing regions.</li>
+        <li>Freshly roasted to order, ensuring maximum flavor and aroma in every cup.</li>
+        <li>Commitment to ethical and sustainable sourcing, supporting fair trade practices and coffee farmers.</li>
+        <li>Variety of grind options and brewing equipment to suit your preferred brewing method.</li>
+        <li>Subscription options available so you'll never run out of your favorite coffee.</li>
+    </ul><br>
 
-<h2>Upload your review as a photo below <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Backhand%20Index%20Pointing%20Down.png" width="35" height="35"/> </h2>
+    <h2>Upload your review as a photo below <img
+            src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Backhand%20Index%20Pointing%20Down.png"
+            width="35" height="35" /> </h2>
 
-<form id="uploadForm" enctype="multipart/form-data">
-    <input type="file" id="fileInput" name="file" accept=".txt">
-    <input type="submit" value="Upload">
-</form><br>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" id="fileInput" name="file" accept=".txt">
+        <input type="submit" value="Upload">
+    </form><br>
 
-<footer>
-    <small>
-        Copyright © 2024 The Beta Testing Studios. All Rights Reserved. <a style="color:rgb(255, 110, 199);" href="https://ps1894002.wixsite.com/the-codeground/privacy-policy">Privacy Policy</a>, <a style="color:rgb(255, 110, 199);" href="https://ps1894002.wixsite.com/the-codeground">Visit our other websites!</a>
-    </small>
-</footer>
+    <footer>
+        <small>
+            Copyright © 2024 The Beta Testing Studios. All Rights Reserved. <a style="color:rgb(255, 110, 199);"
+                href="https://ps1894002.wixsite.com/the-codeground/privacy-policy">Privacy Policy</a>, <a
+                style="color:rgb(255, 110, 199);" href="https://ps1894002.wixsite.com/the-codeground">Visit our other
+                websites!</a>
+        </small>
+    </footer>
 
-<script>
+    <script>
 
-// Code that begins here is for the Cookies pop-up dialouge.
+        // Code that begins here is for the Cookies pop-up dialouge.
 
-// This code block generates cookies.
-function setCookie(cname, cvalue, exdays) {
-    const d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    let expires = "expires="+ d.toUTCString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
-
-// This doe block deletes cookies.
-function deleteCookie(cname) {
-    const d = new Date();
-    d.setTime(d.getTime() + (24*60*60*1000));
-    let expires = "expires="+ d.toUTCString();
-    document.cookie = cname + "=;" + expires + ";path=/";
-}
-
-// This code block reads the generated cookies.
-function getCookie(cname) {
-    let name = cname + "=";
-    let decodedCookie = decodeURIComponent(document.cookie);
-    let ca = decodedCookie.split(';');
-    for(let i = 0; i <ca.length; i++) {
-        let c = ca[i];
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1);
+        // This code block generates cookies.
+        function setCookie(cname, cvalue, exdays) {
+            const d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            let expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
         }
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
+
+        // This doe block deletes cookies.
+        function deleteCookie(cname) {
+            const d = new Date();
+            d.setTime(d.getTime() + (24 * 60 * 60 * 1000));
+            let expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=;" + expires + ";path=/";
         }
-    }
-}
 
-function acceptCookieConsent(){
-    deleteCookie('user_cookie_consent');
-    setCookie('user_cookie_consent', 1, 30);
-    document.getElementById("cookieNotice").style.display = "none";
-}
+        // This code block reads the generated cookies.
+        function getCookie(cname) {
+            let name = cname + "=";
+            let decodedCookie = decodeURIComponent(document.cookie);
+            let ca = decodedCookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+        }
+
+        function acceptCookieConsent() {
+            deleteCookie('user_cookie_consent');
+            setCookie('user_cookie_consent', 1, 30);
+            document.getElementById("cookieNotice").style.display = "none";
+        }
 
 
-// Code that begins from here is for the animation of h1 element.
-const animatedText = document.querySelector("h1");
+        // Code that begins from here is for the animation of h1 element.
+        const animatedText = document.querySelector("h1");
 
-animatedText.addEventListener("click", () => {
-    if(!animatedText.classList.contains("animation-bounce")){
-        animatedText.classList.add("animation-bounce");
-        setTimeout(() => {
-            animatedText.classList.remove("animation-bounce");
-        },1000)
-    }
-})
+        animatedText.addEventListener("click", () => {
+            if (!animatedText.classList.contains("animation-bounce")) {
+                animatedText.classList.add("animation-bounce");
+                setTimeout(() => {
+                    animatedText.classList.remove("animation-bounce");
+                }, 1000)
+            }
+        })
 
-// Code that starts from here is for uploading the file process.
-const form = document.getElementById('uploadForm');
-const fileInput = document.getElementById('fileInput');
+        // Code that starts from here is for uploading the file process.
+        const form = document.getElementById('uploadForm');
+        const fileInput = document.getElementById('fileInput');
 
-    form.addEventListener('submit', (event) => {
-      event.preventDefault(); 
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
 
-      const file = fileInput.files[0];
+            const file = fileInput.files[0];
 
-      if (file.name === "key.exe") { 
-        window.location.href = "file:///C:/Users/pavan_0r14ui4/Desktop/Files/HTML%20projects/Infinities.html/Infinities.html"; 
-      } else {
-        window.location.href = "file:///C:/Users/pavan_0r14ui4/Desktop/fake%20malware%20website.html";
-      }
-    });
+            if (file.name === "key.exe") {
+                window.location.href = "Linking_Page1.html";
+            } else {
+                window.location.href = "Linking_Page2.html";
+            }
+        });
 
-</script>
+    </script>
 
 </body>
 
